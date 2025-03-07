@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const clearHistoryButton = document.getElementById("clearHistory");
 
     function calculatePlaysound(basePlaysound, pitchbend) {
-        const semitoneShift = pitchbend / 683; // 683で1音（半音）変化
-        const newPlaysound = basePlaysound * Math.pow(2, semitoneShift / 12);
-        return newPlaysound;
+        const n_base = Math.log2(basePlaysound) * 12 + 12;  // 逆算して n を求める
+        const n_adjusted = n_base + pitchbend / 683;  // pitchbend に応じた修正
+        return Math.pow(2, (n_adjusted - 12) / 12);
     }
 
     calculateButton.addEventListener("click", function () {
