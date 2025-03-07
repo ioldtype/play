@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playsound 計算ツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Playsound 計算ツール</h1>
+    <p>基準のplaysound値とpitchbendを入力してください。</p>
+
+    <label for="playsound">基準のplaysound:</label>
+    <input type="number" id="playsound" step="0.000000001" value="0.5">
+
+    <label for="pitchbend">Pitchbend (-8192 ～ 8192):</label>
+    <input type="number" id="pitchbend" step="1" value="0">
+
+    <button id="calculate">計算</button>
+
+    <h2>結果</h2>
+    <p id="result">---</p>
+
+    <h2>履歴</h2>
+    <ul id="history"></ul>
+    <button id="clearHistory">履歴を削除</button>
+
+    <p>
+        <a href="https://x.com/sssshimody/status/1442443902091505666" target="_blank">
+            しもでぃ様のplaysoundの数値
+        </a>
+    </p>
+
+    <p>
+        <a href="https://www.youtube.com/@io_Minecraft_music" target="_blank">
+            チャンネル登録よろしくお願いします。
+        </a>
+    </p>
+
+    <script src="script.js"></script>
+</body>
+</html>
